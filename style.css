@@ -102,10 +102,11 @@ form input, select, textarea{
     padding: 8px 0;
 }
 
-#precioTotal{
+#precioSeguro{
     color: #427d9d;
     font-family: Arial, Helvetica, sans-serif;
     font-size: large;
+    margin-left: 10px;
 }
 
 form button{
@@ -139,3 +140,15 @@ footer li{
     font-size: medium;
     text-align: center;
 }
+
+@media (max-width: 768px){
+
+    h1{
+        font-size:large;
+        margin: 0 20%;
+    }
+
+    form{
+        margin: 0 10%;
+    }
+}    

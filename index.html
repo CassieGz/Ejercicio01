@@ -63,14 +63,14 @@ Al seleccionar el tipo de seguro (básico, intermedio, premium) se deberá mostr
                         <label for="phoneNumber">Teléfono:</label>
                         <input type="tel" placeholder="xx-xxxx-xxxx" maxlength="15" required>
                         <label for="tipoSeguro">Tipo de seguro:</label>
-                        <select name="type" onchange="cambiarTipo()" id="tipoSeguro">
-                            <option value="0"></option>
+                        <select name="type" onchange="cambiarTipo()" id="tipoSeguro" required>
+                            <option value=""></option>
                             <option value="500">Básico: $500</option>
                             <option value="1000">Intermedio: $1000</option>
                             <option value="1500">Premium: $1500</option>
                             
                         </select>
-                        <span id="precioTotal"></span>
+                        <span id="precioSeguro"></span>
                         <label for="mensaje">Mensaje:</label>
                         <textarea name="mensaje" id="msje" cols="25" rows="10" placeholder="Escribe algo.." maxlength="200"></textarea>
                         <div>

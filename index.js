@@ -2,10 +2,9 @@ function cambiarTipo(){
     var seguroElegido = document.getElementById("tipoSeguro");
     var elementoSeleccionado = seguroElegido.value;
 
-    document.getElementById("precioTotal").innerHTML ="El precio del seguro contratado es de $" + elementoSeleccionado;
-    limpiarCampo();
-}
-
-function limpiarCampo(){
-    document.getElementById("tipoSeguro").innerHTML ="";
+    if (elementoSeleccionado === ""){
+        document.getElementById("precioSeguro").innerText ="";
+    }else{
+    document.getElementById("precioSeguro").innerText =" El precio del seguro contratado es de $" + elementoSeleccionado;
+    }
 }
