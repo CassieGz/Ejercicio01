@@ -1,0 +1,92 @@
+<!-- CONSIGNA
+    Seguro No Pagamos Cooperativa es una compañía de seguros que lleva 2 años en el mercado. Hasta el momento trabajan con los esquemas tradicionales de venta, es decir contacto telefónico o a través de sus asesores con los potenciales clientes.
+
+El directorio de la compañía se reunió con el departamento de sistemas para solicitarle un desarrollo de un sitio web. El objetivo es que los futuros clientes puedan solicitar un contacto a través de la web para que un asesor se contacte con ellos.
+
+Vos como parte del equipo de desarrollo debes realizar el maquetado HTML de este sitio web, dándole estilos al mismo con la utilización de CSS
+
+Los datos que se deben solicitar son los siguientes:
+
+• Nombre
+• Apellido
+⚫ DNI
+• Email
+• Teléfono
+⚫ Tipo de seguro
+o Básico
+o Intermedio
+o Premium
+
+Al seleccionar el tipo de seguro (básico, intermedio, premium) se deberá mostrar en pantalla el valor de cada uno:
+
+⚫ Basico: $500
+• Intermedio: $1000
+• Premium: $1500-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/jpg" href="">
+    <link rel="stylesheet" href="style.css">
+    <title>Seguro No Pagamos Cooperativa</title>
+</head>
+<body>
+    <header>
+        <img src="./snp.png" width="130px" height="130px" alt="logo seguro">
+        <ul style=list-style:none>
+            <li><a href="#nosotros">Nosotros</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+        </ul>
+    </header>
+    <main>
+        <h1>Seguro No pagamos</h1>
+        <section id="nosotros">
+        <h2>Nosotros</h2>
+        <p>Somos una compañía de seguros que lleva 2 años en el mercado.</p>
+        </section>
+        <section id="contacto">
+                <h2>Contactanos!</h2>
+                <p>Llená el formulario y te respondemos a la brevedad</p>
+            <div class="container">
+                    <form action="">
+                        <label for="nameCustomer">Nombre:</label>
+                        <input type="text" placeholder="Mengano..." name="nameCustomer" maxlength="30" required>
+                        <label for="secondName">Apellido:</label>
+                        <input type="text" placeholder="Ramirez.." name="secondName" maxlength="30" required>
+                        <label for="documento">DNI:</label>
+                        <input type="text" placeholder="XX-XXX-XXX" name="documento" maxlength="10" required>
+                        <label for="Email">Email:</label>
+                        <input type="text" placeholder="email@server.com" required>
+                        <label for="phoneNumber">Teléfono:</label>
+                        <input type="tel" placeholder="xx-xxxx-xxxx" maxlength="15" required>
+                        <label for="tipoSeguro">Tipo de seguro:</label>
+                        <select name="type" onchange="cambiarTipo()" id="tipoSeguro">
+                            <option value="0"></option>
+                            <option value="500">Básico: $500</option>
+                            <option value="1000">Intermedio: $1000</option>
+                            <option value="1500">Premium: $1500</option>
+                            
+                        </select>
+                        <span id="precioTotal"></span>
+                        <label for="mensaje">Mensaje:</label>
+                        <textarea name="mensaje" id="msje" cols="25" rows="10" placeholder="Escribe algo.." maxlength="200"></textarea>
+                        <div>
+                           <button type="submit">Enviar</button>
+                           <button type="reset">Reestablecer</button>
+                       </div>
+                    </form>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <ul style="list-style:none">
+            <li>Todos los derechos reservados</li>
+            <li>SeguroNoPagamos&copy;2023</li>
+        </ul>
+    </footer>
+    <script src="/index.js"></script>   
+</body>
+</html>
