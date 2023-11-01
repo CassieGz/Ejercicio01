@@ -79,7 +79,7 @@ p{
 }
 
 form{
-    background-color: #cdf5fd;
+    background-color:#ddf2fd;
     border-radius: 10px;
     border-style:none;
     color: #61677a;
@@ -101,7 +101,6 @@ form input, select, textarea{
     margin: 5px 10px;
     padding: 8px 0;
 }
-
 #precioSeguro{
     color: #427d9d;
     font-family: Arial, Helvetica, sans-serif;
@@ -127,21 +126,30 @@ button:hover{
 
 footer{
     background-color: #0099ff;
-    padding: 15px 0px;
-    margin:10px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 15px;
+    padding-bottom: 40px;
+}
+
+footer ul{
+    padding: 0;
 }
 
 footer li{
     color: #ededed;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     font-family: Arial, Helvetica, sans-serif;
-    font-size: medium;
     text-align: center;
 }
 
 @media (max-width: 768px){
+
+    header ul{
+        display: block;
+        padding:0;
+        padding-right: 15px;
+    }
 
     h1{
         font-size:large;
@@ -150,5 +158,9 @@ footer li{
 
     form{
         margin: 0 10%;
+    }
+
+    footer li{
+        font-size: small;
     }
 }    
